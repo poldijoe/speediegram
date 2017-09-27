@@ -177,7 +177,7 @@ var insta = {
         insta.main();
 
         // Reload Speeddial
-        opera.extension.tabs[opera.extension.tabs.length-1].update({"url":"opera://startpage"});
+        opera.extension.tabs.getFocused().update({"url":"opera://startpage"});
         break;
       case 'error':
         console.log('auth error');
@@ -218,7 +218,7 @@ opera.isReady(function(){
     widget.preferences.setItem("apiEndpoint", "https://api.instagram.com/v1/");
     widget.preferences.setItem("authEndpoint", "https://instagram.com/oauth/authorize/");
     widget.preferences.setItem("feedPath", "users/self/feed");
-    widget.preferences.setItem("callback", "http://paddy2k.github.io/speediegram/");
+    widget.preferences.setItem("callback", "https://paddy2k.github.io/speediegram/");
     widget.preferences.setItem("clientId", "7ac4b011a4ae43a4a03ba34ed7b0ec6b");
     widget.preferences.setItem("gridInterval", "120");
     widget.preferences.setItem("stackInterval", "5");
